@@ -35,4 +35,11 @@ class CityListTest {
         assertEquals(0, mockCity().compareTo(cityList.getCities().get(0)));
 
     }
+
+    @Test
+    void testRemoveCities() {
+        CityList cityList = mockCityList();
+        assertTrue(cityList.getCities().size() == 0);
+    }
+    
 }
