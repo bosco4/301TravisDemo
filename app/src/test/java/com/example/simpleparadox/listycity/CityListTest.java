@@ -39,7 +39,19 @@ class CityListTest {
     @Test
     void testRemoveCities() {
         CityList cityList = mockCityList();
-        assertTrue(cityList.getCities().size() == 0);
+        assertTrue(cityList.getCities().size() == 1);
+
+        City tempCity = new City("Regina", "Saskatchewan");
+        cityList.add(tempCity);
+        cityList.add(new City("Vancouver", "BC"));
+        assertTrue(cityList.getCities().size() == 3);
+
+        cityList.delete(tempCity);
+        assertTrue(cityList.getCities().size() == 2);
+
+
+
+
     }
-    
+
 }
